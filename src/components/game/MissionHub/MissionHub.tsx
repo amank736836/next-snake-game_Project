@@ -12,11 +12,13 @@ interface MissionHubProps {
     setControlType: (type: ControlType) => void;
     onViewLeaderboard: () => void;
     inputRef: React.RefObject<HTMLInputElement | null>;
+    showLeaderboardButton?: boolean;
 }
 
 export default function MissionHub({
     playerName, setPlayerName, alert, onStart, onResume,
-    hasSavedGame, controlType, setControlType, onViewLeaderboard, inputRef
+    hasSavedGame, controlType, setControlType, onViewLeaderboard, inputRef,
+    showLeaderboardButton = true
 }: MissionHubProps) {
     return (
         <div className={styles.centerColumn}>
@@ -62,11 +64,11 @@ export default function MissionHub({
                         🟢 JOYSTICK
                     </button>
                 </div>
-            </div>
 
-            <button className={`${styles.navBtn} mobile-only`} onClick={onViewLeaderboard}>
-                🏆 VIEW HALL OF FAME
-            </button>
+                <button className={`${styles.navBtn} mobile-only`} onClick={onViewLeaderboard}>
+                    🏆 VIEW HALL OF FAME
+                </button>
+            </div>
         </div>
     );
 }
