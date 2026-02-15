@@ -10,13 +10,13 @@ export async function GET(req: Request) {
         const skip = (page - 1) * limit;
 
         await connectToDatabase();
-        const scores = await Score.find()
+        const scores = await Score.find({ score: { $gt: 0 } })
             .sort({ score: -1 })
             .sort({ highestScore: -1 })
             .skip(skip)
             .limit(limit);
 
-        const total = await Score.countDocuments();
+        const total = await Score.countDocuments({ score: { $gt: 0 } });
 
         return NextResponse.json({
             scores,
