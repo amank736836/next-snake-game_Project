@@ -1,0 +1,157 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tabSwitcher {
+    display: flex;
+    gap: 0.5rem;
+    background: var(--input-bg);
+    padding: 6px;
+    border-radius: 12px;
+    border: 4px solid var(--game-border);
+}
+
+.tabBtn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background: none;
+    color: var(--input-text);
+    font-weight: 900;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.2s;
+    font-size: 0.9rem;
+}
+
+.tabBtn.active {
+    background: var(--button-green);
+    color: white;
+    box-shadow: 0 4px 0 var(--game-border);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    width: 100%;
+}
+
+@media (min-width: 850px) {
+    .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.section {
+    background: var(--input-bg);
+    border: 4px solid var(--game-border);
+    border-radius: 20px;
+    padding: 1.25rem;
+    box-shadow: 10px 10px 0 var(--game-border), 15px 15px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+}
+
+.section h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+    color: var(--button-green);
+    text-align: center;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    padding: 10px 14px;
+    background: rgba(0, 0, 0, 0.03);
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+}
+
+.item:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+.rank {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, var(--game-border), #444);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 14px;
+    font-size: 0.8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.name {
+    flex: 1;
+    margin-right: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.val {
+    color: var(--button-green);
+    font-weight: 900;
+    padding-left: 10px;
+    border-left: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    font-weight: 900;
+}
+
+.pagination button {
+    background: var(--game-border);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3);
+}
+
+.backBtn {
+    margin-top: 1rem;
+    padding: 16px;
+    border-radius: 12px;
+    border: 4px solid var(--game-border);
+    font-weight: 900;
+    background: var(--game-border);
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 849px) {
+    .mobileHide {
+        display: none !important;
+    }
+}

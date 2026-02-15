@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--game-border);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 16px 16px 0 0;
+    font-weight: 900;
+    z-index: 10;
+    box-sizing: border-box;
+}
+
+.currentUser,
+.liveScore {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pauseBtn {
+    background: #ffa502;
+    color: white;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #e67e22;
+    transition: all 0.1s;
+}
+
+.pauseBtn:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}

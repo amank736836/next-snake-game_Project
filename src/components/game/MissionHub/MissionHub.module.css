@@ -1,0 +1,155 @@
+.centerColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(0.5rem, 3vh, 1.5rem);
+    width: 100%;
+}
+
+.title {
+    text-align: center;
+}
+
+.logoEmoji {
+    font-size: clamp(3rem, 8vh, 5rem);
+}
+
+.gameName {
+    font-size: clamp(32px, 12vw, 100px);
+    font-weight: 950;
+    letter-spacing: -4px;
+    margin: 0.5rem 0;
+    line-height: 0.9;
+}
+
+.subtitle {
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+    opacity: 0.7;
+    font-weight: 600;
+}
+
+.menuBox {
+    background: var(--input-bg);
+    padding: clamp(1.5rem, 5vh, 2.5rem);
+    border: 5px solid var(--game-border);
+    border-radius: 20px;
+    box-shadow: 15px 15px 0 var(--game-border), 20px 20px 40px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(1rem, 4vh, 2rem);
+    width: 100%;
+    max-width: 480px;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.menuBox:hover {
+    transform: scale(1.02);
+}
+
+.userInput {
+    width: 100%;
+    padding: 18px;
+    font-size: 1.4rem;
+    border: 4px solid var(--game-border);
+    border-radius: 12px;
+    text-align: center;
+    font-weight: 800;
+    background: var(--background);
+    color: var(--foreground);
+}
+
+.alertText {
+    color: #ff4757;
+    font-weight: 800;
+    text-align: center;
+    margin: 0;
+}
+
+.startBtn {
+    width: 100%;
+    padding: clamp(14px, 3.5vh, 22px);
+    background: linear-gradient(to bottom, #4caf50, #45a049);
+    color: white;
+    border: 4px solid var(--game-border);
+    border-radius: 16px;
+    font-size: clamp(1rem, 4.5vh, 1.6rem);
+    font-weight: 950;
+    cursor: pointer;
+    box-shadow: 0 10px 0 var(--game-border);
+    transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    letter-spacing: 1px;
+}
+
+.startBtn:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+}
+
+.startBtn:active {
+    transform: translateY(10px);
+    box-shadow: none;
+}
+
+.resumeBtn {
+    background: linear-gradient(to right, #3a7bd5, #00d2ff);
+    color: white;
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 950;
+    border: 5px solid #1c4e80;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 8px 0 #1c4e80;
+}
+
+.resumeBtn:active {
+    transform: translateY(4px);
+    box-shadow: 0 4px 0 #1c4e80;
+}
+
+.controlSelector {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.selectorBtn {
+    flex: 1;
+    padding: 10px 4px;
+    background: var(--input-bg);
+    border: 4px solid var(--game-border);
+    border-radius: 12px;
+    font-weight: 800;
+    font-size: clamp(0.7rem, 2.5vw, 0.9rem);
+    cursor: pointer;
+    opacity: 0.6;
+    color: var(--input-text);
+}
+
+.selectorBtn.active {
+    background: linear-gradient(to bottom, #4caf50, #2e7d32);
+    color: white;
+    opacity: 1;
+    box-shadow: 0 5px 0 var(--game-border);
+    transform: translateY(-4px);
+    border-color: #1b5e20;
+}
+
+.navBtn {
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    border: 4px solid var(--game-border);
+    font-weight: 900;
+    background: var(--input-bg);
+    color: var(--button-green);
+    border-color: var(--button-green);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.navBtn:hover {
+    background: var(--button-green);
+    color: white;
+}
